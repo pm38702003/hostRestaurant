@@ -23,7 +23,7 @@
             <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style = "background-image: url(https://images.unsplash.com/photo-1515539408953-9403f070ad2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80);">
                 <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
                     <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">
-                        Hot Restaurant Reservation
+                        Host Restaurant Reservation
                     </h1>
                     <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
                         Book your seat before they are gone!
@@ -52,31 +52,31 @@
         const display = $("#display");
         display.empty()
 
-        display.append($("<p>").html("Reservation List"));
+        display.append($("<h2>").html("Reservation List"));
 
         data.list.forEach(reservation => {
           const div = $("<div>");
 
-          div.append($("<p>").html(`Name: ${reservation.name}`));
+          div.append($("<h3>").html(`Name: ${reservation.name}`));
           div.append($("<p>").html(`Date: ${reservation.date}`));
           div.append($("<p>").html(`Time: ${reservation.time}`));
           div.append($("<p>").html(`Notes: ${reservation.notes}`));
 
           display.append(div);
-          display.append("<br>");
+          display.append("<hr>");
         });
 
-        display.append($("<p>").html("Wait List"));
+        display.append($("<h2>").html("Wait List"));
         data.waitlist.forEach(reservation => {
           const div = $("<div>");
 
-          div.append($("<p>").html(`Name: ${reservation.name}`));
+          div.append($("<h3>").html(`Name: ${reservation.name}`));
           div.append($("<p>").html(`Date: ${reservation.date}`));
           div.append($("<p>").html(`Time: ${reservation.time}`));
           div.append($("<p>").html(`Notes: ${reservation.notes}`));
 
           display.append(div);
-          display.append("<br>");
+          display.append("<hr>");
         });
       });
     });
