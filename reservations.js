@@ -22,12 +22,6 @@ const reservations = [
         date: "sample date D",
         time: "sample time D",
         notes: "sample notes D",
-    },
-    {
-        name: "sample name E",
-        date: "sample date E",
-        time: "sample time E",
-        notes: "sample notes E",
     }
 ]
 
@@ -37,6 +31,7 @@ const waitlist = [
         date: "sample date F",
         time: "sample time F",
         notes: "sample notes F",
+        
     },{
         name: "sample name G",
         date: "sample date G",

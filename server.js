@@ -2,9 +2,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-var reservations = require("./reservations")
-
-
+var reservations = require("./reservations");
 
 // Sets up the Express App
 // =============================================================
@@ -26,14 +24,16 @@ app.get("/api/reservations", function(req, res) {
 });
 
 //post request to reservations
-app.post('/api/reservations', (req, res) => {
-  const reservation = req.body
+app.post("/api/reservations", (req, res) => {
+  const reservation = req.body;
 
   //put request body into reservations.js
-  reservations.list.push(reservation)
-  res.json(reservations);
-})
+  reservations.list.length < 5
+    ? reservations.list.push(reservation)
+    : reservations.waitlist.push(reservation);
 
+  res.json(reservations);
+});
 
 // Starts the server to begin listening
 // =============================================================
