@@ -46,7 +46,7 @@
   <script type="text/javascript">
     $("#table-button").on("click", () => {
       $.get("/api/reservations", data => {
-        $("#display").append(data)
+        $("#display").append(JSON.stringify(data))
         console.log(data);
       });
     });
