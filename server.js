@@ -2,6 +2,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
+var reservations = require("./reservations")
 
 // Sets up the Express App
 // =============================================================
@@ -19,7 +20,7 @@ app.get("/", function(req, res) {
 
 //get request to reservations
 app.get("/reservations", function(req, res) {
-  res.json();
+  res.json(reservations);
 });
 
 //post request to reservations
