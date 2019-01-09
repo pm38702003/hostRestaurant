@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" background="https://previews.123rf.com/images/phonlamaiphoto/phonlamaiphoto1611/phonlamaiphoto161101742/65648068-wooden-background-or-timber-wood-background.jpg">
 
-<head>
+<head background="https://previews.123rf.com/images/phonlamaiphoto/phonlamaiphoto1611/phonlamaiphoto161101742/65648068-wooden-background-or-timber-wood-background.jpg">
     <meta charset="UTF-8">
     <title>
         Form
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
         crossorigin="anonymous"></script>
@@ -14,53 +15,56 @@
 </head>
 
 <body>
-    <form class="uk-form-horizontal uk-margin-large">
+    <div id="formpretty" style="margin: 20px; padding:20px; border:solid gray; background:white;">
+        <form class="uk-form-horizontal uk-margin-large">
 
-        <div class="uk-margin">
-            <label class="uk-form-label" for="name">Name</label>
-            <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="name" type="text" name="firstname" placeholder="e.g. John">
+            <div class="uk-margin">
+                <label class="uk-form-label" for="name">Name</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-large" id="name" type="text" name="firstname" placeholder="e.g. John">
+                </div>
             </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="lastname">Last Name</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-large" id="lastname" type="text" name="lastname" placeholder="e.g. Doe">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="date">Date</label>
+                <div class="uk-form-controls">
+                    <input class="datepicker uk-input uk-form-width-medium" id="date" type="text" name="date"
+                        placeholder="e.g. mm/dd/yyyy">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="time">Time</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-medium" id="time" type="text" name="time" placeholder="e.g. hh:mm">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="user">User ID</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input uk-form-width-large" id="user" type="text" placeholder="e.g. Superman">
+                </div>
+            </div>
+
+            <div class="uk-margin">
+                <label class="uk-form-label" for="comments">Comments</label>
+                <div class="uk-form-controls">
+                    <textarea class="uk-textarea uk-form-width-large" id="comments" rows="5" placeholder="Special instructions"></textarea>
+                </div>
+
+        </form>
+        <br>
+        <div class="submitB">
+            <button type="submit" class="uk-button uk-button-primary" id="add-btn"><span class="fa fa-fire"></span>Submit</button>
         </div>
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="lastname">Last Name</label>
-            <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="lastname" type="text" name="lastname" placeholder="e.g. Doe">
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="date">Date</label>
-            <div class="uk-form-controls">
-                <input class="datepicker uk-input uk-form-width-medium" id="date" type="text" name="date" placeholder="e.g. mm/dd/yyyy">
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="time">Time</label>
-            <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-medium" id="time" type="text" name="time" placeholder="e.g. hh:mm">
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="user">User ID</label>
-            <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="user" type="text" placeholder="e.g. Superman">
-            </div>
-        </div>
-
-        <div class="uk-margin">
-            <label class="uk-form-label" for="comments">Comments</label>
-            <div class="uk-form-controls">
-                <textarea class="uk-textarea uk-form-width-large" id="comments" rows="5" placeholder="Special instructions"></textarea>
-            </div>
-
-    </form>
-    <br>
-    <div class="submitB">
-        <button type="submit" class="uk-button uk-button-primary" id="add-btn"><span class="fa fa-fire"></span>Submit</button>
     </div>
 </body>
 <script type="text/javascript">
@@ -84,7 +88,7 @@
             })
     });
 
-        $("#date").datepicker();
+    $("#date").datepicker();
 
 
 
