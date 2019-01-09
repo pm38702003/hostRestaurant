@@ -12,6 +12,7 @@
 </head>
 
 <body>
+  <a href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css">CNN</a>
   <div class="uk-section">
     <!-- <div class = "uk-container-large"> -->
 
@@ -65,8 +66,11 @@
 
         display.append($('<p>').html("Wait List"))
         data.waitlist.forEach(reservation => {
+          div.append($("<p>").html(`Name: ${reservation.name}`))
+          div.append($("<p>").html(`Date: ${reservation.date}`))
+          div.append($("<p>").html(`Time: ${reservation.time}`))
+          div.append($("<p>").html(`Notes: ${reservation.notes}`))
 
-          display.append(JSON.stringify(reservation)).append("<br>").append("<br>");
         });
       });
     });
