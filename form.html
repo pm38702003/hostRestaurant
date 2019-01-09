@@ -41,7 +41,7 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="time">Time</label>
             <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-medium" id="form-horizontal-text" type="text" name="time"
+                <input class="uk-input uk-form-width-medium" id="time" type="text" name="time"
                     placeholder="e.g. hh:mm">
             </div>
         </div>
@@ -49,14 +49,14 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="user">User ID</label>
             <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="form-horizontal-text" type="text" placeholder="e.g. Superman">
+                <input class="uk-input uk-form-width-large" id="user" type="text" placeholder="e.g. Superman">
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="comments">Comments</label>
             <div class="uk-form-controls">
-                <textarea class="uk-textarea uk-form-width-large" rows="5" placeholder="Special instructions"></textarea>
+                <textarea class="uk-textarea uk-form-width-large" id="comments" rows="5" placeholder="Special instructions"></textarea>
             </div>
 
     </form>
@@ -70,13 +70,15 @@
         event.preventDefault();
 
         var newRes = {
-            name:
-            lastname:
-            date:
-            time:
-            user:
-            comments:
-        }
+            name: $("#name").val.trim(),
+            lastname: $("#lastname").val.trim(),
+            date: $("#date").val.trim(),
+            time: $("#time").val.trim(),
+            user: $("#user").val.trim(),
+            comments: $("#comments").trim()
+        };
+
+        
     })
 
     $('.datepicker').datetimepicker({
