@@ -1,0 +1,24 @@
+{
+  "name": "hostrestaurant",
+  "version": "1.0.0",
+  "description": "gwu-bootcamp assignment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pm38702003/hostRestaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pm38702003/hostRestaurant/issues"
+  },
+  "homepage": "https://github.com/pm38702003/hostRestaurant#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
