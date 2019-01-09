@@ -19,6 +19,7 @@
   "homepage": "https://github.com/pm38702003/hostRestaurant#readme",
   "dependencies": {
     "express": "^4.16.4",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "uikit": "^3.0.0-rc.26"
   }
 }
