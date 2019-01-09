@@ -2,6 +2,6 @@
 
 API GUIDE:
 
-GET /api/reservations.json
+GET /api/reservations
 
 return json of list and waitlist

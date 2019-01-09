@@ -4,6 +4,8 @@ var express = require("express");
 var path = require("path");
 var reservations = require("./reservations")
 
+
+
 // Sets up the Express App
 // =============================================================
 var app = express();
@@ -19,13 +21,17 @@ app.get("/", function(req, res) {
 });
 
 //get request to reservations
-app.get("/api/reservations.json", function(req, res) {
+app.get("/api/reservations", function(req, res) {
   res.json(reservations);
 });
 
 //post request to reservations
-app.post('/reservations', (req, res) => {
-  // const name = req.body.name
+app.post('/api/reservations', (req, res) => {
+  const reservation = req.body
+
+  //put request body into reservations.js
+  reservations.list.push(reservation)
+  res.json(reservations);
 })
 
 
