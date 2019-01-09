@@ -18,6 +18,10 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/form", function(req, res) {
+  res.sendFile(path.join(__dirname, "form.html"));
+});
+
 //get request to reservations
 app.get("/api/reservations", function(req, res) {
   res.json(reservations);
