@@ -40,6 +40,8 @@
             </div>
         </div>
     </div>
+    <div id="display"></div>
+
     <!-- </div> -->
     <p>
       <a href="">API Table List</a><span> | </span><span><a href="">API Wait List</a></span>
@@ -50,6 +52,35 @@
     $("#table-button").on("click", () => {
       $.get("/api/reservations", data => {
         console.log(data);
+        const display = $("#display");
+        display.empty()
+
+        display.append($("<p>").html("Reservation List"));
+
+        data.list.forEach(reservation => {
+          const div = $("<div>");
+
+          div.append($("<p>").html(`Name: ${reservation.name}`));
+          div.append($("<p>").html(`Date: ${reservation.date}`));
+          div.append($("<p>").html(`Time: ${reservation.time}`));
+          div.append($("<p>").html(`Notes: ${reservation.notes}`));
+
+          display.append(div);
+          display.append("<br>");
+        });
+
+        display.append($("<p>").html("Wait List"));
+        data.waitlist.forEach(reservation => {
+          const div = $("<div>");
+
+          div.append($("<p>").html(`Name: ${reservation.name}`));
+          div.append($("<p>").html(`Date: ${reservation.date}`));
+          div.append($("<p>").html(`Time: ${reservation.time}`));
+          div.append($("<p>").html(`Notes: ${reservation.notes}`));
+
+          display.append(div);
+          display.append("<br>");
+        });
       });
     });
   </script>

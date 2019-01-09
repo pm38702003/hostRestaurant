@@ -18,13 +18,17 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/form", function(req, res) {
+  res.sendFile(path.join(__dirname, "form.html"));
+});
+
 //get request to reservations
-app.get(path.join(__dirname, "/api/reservations"), function(req, res) {
+app.get("/api/reservations", function(req, res) {
   res.json(reservations);
 });
 
 //post request to reservations
-app.post(path.join(__dirname, "/api/reservations"), (req, res) => {
+app.post("/api/reservations", (req, res) => {
   const reservation = req.body;
 
   //put request body into reservations.js
