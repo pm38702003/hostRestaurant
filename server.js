@@ -19,12 +19,12 @@ app.get("/", function(req, res) {
 });
 
 //get request to reservations
-app.get("/api/reservations", function(req, res) {
+app.get(path.join(__dirname, "/api/reservations"), function(req, res) {
   res.json(reservations);
 });
 
 //post request to reservations
-app.post("/api/reservations", (req, res) => {
+app.post(path.join(__dirname, "/api/reservations"), (req, res) => {
   const reservation = req.body;
 
   //put request body into reservations.js
