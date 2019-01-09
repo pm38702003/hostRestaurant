@@ -19,7 +19,7 @@ app.get("/", function(req, res) {
 });
 
 //get request to reservations
-app.get("/reservations", function(req, res) {
+app.get("/api/reservations.json", function(req, res) {
   res.json(reservations);
 });
 
