@@ -8,6 +8,8 @@
     </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="
+        crossorigin="anonymous"></script>
 
 </head>
 
@@ -17,32 +19,28 @@
         <div class="uk-margin">
             <label class="uk-form-label" for="name">Name</label>
             <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="name" type="text" name="firstname"
-                    placeholder="e.g. John">
+                <input class="uk-input uk-form-width-large" id="name" type="text" name="firstname" placeholder="e.g. John">
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="lastname">Last Name</label>
             <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-large" id="lastname" type="text" name="lastname"
-                    placeholder="e.g. Doe">
+                <input class="uk-input uk-form-width-large" id="lastname" type="text" name="lastname" placeholder="e.g. Doe">
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="date">Date</label>
             <div class="uk-form-controls">
-                <input class="datepicker uk-input uk-form-width-medium" id="date" type="text" name="date"
-                    placeholder="e.g. mm/dd/yyyy">
+                <input class="datepicker uk-input uk-form-width-medium" id="date" type="text" name="date" placeholder="e.g. mm/dd/yyyy">
             </div>
         </div>
 
         <div class="uk-margin">
             <label class="uk-form-label" for="time">Time</label>
             <div class="uk-form-controls">
-                <input class="uk-input uk-form-width-medium" id="time" type="text" name="time"
-                    placeholder="e.g. hh:mm">
+                <input class="uk-input uk-form-width-medium" id="time" type="text" name="time" placeholder="e.g. hh:mm">
             </div>
         </div>
 
@@ -62,11 +60,11 @@
     </form>
     <br>
     <div class="submitB">
-    <button type= "submit" class="uk-button uk-button-primary" id="add-btn"><span class="fa fa-fire"></span>Submit</button>
+        <button type="submit" class="uk-button uk-button-primary" id="add-btn"><span class="fa fa-fire"></span>Submit</button>
     </div>
 </body>
 <script type="text/javascript">
-    $("#add-btn").on("click", function(event){
+    $("#add-btn").on("click", function (event) {
         event.preventDefault();
 
         var newRes = {
@@ -78,15 +76,19 @@
             comments: $("#comments").trim()
         };
 
-        
-    
 
-    $.post("/api/reservations", newRes)
-    .then(function(data){
-        console.log(data);
-        alert("Reservation has been made!");
-    })
+        $.post("/api/reservations", newRes)
+            .then(function (data) {
+                console.log(data);
+                alert("Reservation has been made!");
+            })
     });
+
+        $("#date").datepicker();
+
+
+
+
 </script>
 
 </html>
