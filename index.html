@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- <link rel = "stylesheet" href="assets/css/reset.css"> -->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
   <!-- <link rel="stylesheet" href="assets/css/uikit.css" /> -->
   <script src="https://code.jquery.com/jquery.js"></script>
 </head>
@@ -35,8 +35,8 @@
         </div>
       </div>
     </div>
-    <div id="display">display</div>
-    
+    <div id="display"></div>
+
     <!-- </div> -->
     <p>
       <a href="">API Table List</a><span> | </span><span><a href="">API Wait List</a></span>
@@ -46,8 +46,28 @@
   <script type="text/javascript">
     $("#table-button").on("click", () => {
       $.get("/api/reservations", data => {
-        $("#display").append(JSON.stringify(data))
         console.log(data);
+        const display = $("#display")
+
+        display.append($('<p>').html("Reservation List"))
+
+        data.list.forEach(reservation => {
+          const div = $("<div>")
+
+          div.append($("<p>").html(`Name: ${reservation.name}`))
+          div.append($("<p>").html(`Date: ${reservation.date}`))
+          div.append($("<p>").html(`Time: ${reservation.time}`))
+          div.append($("<p>").html(`Notes: ${reservation.notes}`))
+
+          display.append(div);
+          display.append("<br>")
+        });
+
+        display.append($('<p>').html("Wait List"))
+        data.waitlist.forEach(reservation => {
+
+          display.append(JSON.stringify(reservation)).append("<br>").append("<br>");
+        });
       });
     });
   </script>
