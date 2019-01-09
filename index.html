@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel = "stylesheet" href="assets/css/reset.css"> -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
-        <link rel="stylesheet" href="assets/css/uikit.css">
-        <script src="https://code.jquery.com/jquery.js"></script>
-     
-    </head>
 
-    <body>
-            <div class="uk-section">
-        <!-- <div class = "uk-container-large"> -->
+<head>
+  <title>Title</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel = "stylesheet" href="assets/css/reset.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
+  <link rel="stylesheet" href="assets/css/uikit.css" />
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
 
-            <div uk-parallax="opacity: 0,2">
-                <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('assets/images/restaurant.jpg');">
-                    <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
-                        <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">Hot Restaurant Reservation</h1>
-                        <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">Book your seat before they are gone!</p>
-                        <p uk-margin uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
-                                <button class="uk-button uk-button-default uk-button-large" id = "table-button">View Tables</button>
-                                <button class="uk-button uk-button-primary uk-button-large" id = "reserve-button">Make Reservation</button>
-                            </p>
-                    </div>
+<body>
+  <div class="uk-section">
+    <!-- <div class = "uk-container-large"> -->
 
-                </div>
-            </div>
-        <!-- </div> -->
-        <p><a href = "">API Table List</a><span>    |      </span><span><a href = "">API Wait List</a></span></p>
+    <div uk-parallax="opacity: 0,2">
+      <div class="uk-height-large uk-background-cover uk-overflow-hidden uk-light uk-flex uk-flex-top" style="background-image: url('assets/images/restaurant.jpg');">
+        <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">
+          <h1 uk-parallax="opacity: 0,1; y: -100,0; scale: 2,1; viewport: 0.5;">
+            Hot Restaurant Reservation
+          </h1>
+          <p uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
+            Book your seat before they are gone!
+          </p>
+          <p uk-margin uk-parallax="opacity: 0,1; y: 100,0; scale: 0.5,1; viewport: 0.5;">
+            <button class="uk-button uk-button-default uk-button-large" id="table-button">
+              View Tables
+            </button>
+            <button class="uk-button uk-button-primary uk-button-large" id="reserve-button">
+              Make Reservation
+            </button>
+          </p>
         </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <p>
+      <a href="">API Table List</a><span> | </span><span><a href="">API Wait List</a></span>
+    </p>
+  </div>
 
-
-
-    <script type="text/javascript">
-      $("#table-button").on("click", () => {
-        $.get("/api/reservations", data => {
-          console.log(data);
-        });
+  <script type="text/javascript">
+    $("#table-button").on("click", () => {
+      $.get("/api/reservations", data => {
+        console.log(data);
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
