@@ -79,11 +79,13 @@
         };
 
         
-    })
+    
 
-    $('.datepicker').datetimepicker({
-        mask: '39-19-9999 29:59:59',
-        format: 'd-m-Y H:i:s'
+    $.post("/api/reservations", newRes)
+    .then(function(data){
+        console.log(data);
+        alert("Reservation has been made!");
+    })
     });
 </script>
 
