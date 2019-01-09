@@ -1,49 +1,32 @@
 const reservations = [
     {
-        name: "sample name A",
-        date: "sample date A",
-        time: "sample time A",
-        notes: "sample notes A",
+        name: "Alan Andres",
+        date: "01/07/2020",
+        time: "8:00PM",
+        notes: "None",
     },
     {
-        name: "sample name B",
-        date: "sample date B",
-        time: "sample time B",
-        notes: "sample notes B",
+        name: "Betty Ballston",
+        date: "01/07/2020",
+        time: "6:30PM",
+        notes: "None",
     },
     {
-        name: "sample name C",
-        date: "sample date C",
-        time: "sample time C",
-        notes: "sample notes C",
+        name: "Connor Cruz",
+        date: "01/07/2020",
+        time: "7:30PM",
+        notes: "Birthday",
     },
     {
-        name: "sample name D",
-        date: "sample date D",
-        time: "sample time D",
-        notes: "sample notes D",
+        name: "Dani Dangle",
+        date: "01/07/2020",
+        time: "8:30PM",
+        notes: "Peanut Allergy",
     },
-    {
-        name: "sample name E",
-        date: "sample date E",
-        time: "sample time E",
-        notes: "sample notes E",
-    }
 ]
 
 const waitlist = [
-    {
-        name: "sample name F",
-        date: "sample date F",
-        time: "sample time F",
-        notes: "sample notes F",
-        
-    },{
-        name: "sample name G",
-        date: "sample date G",
-        time: "sample time G",
-        notes: "sample notes G",
-    }
+
 ]
 
 console.log(reservations)
