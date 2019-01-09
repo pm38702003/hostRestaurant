@@ -25,6 +25,7 @@
                                 <button class="uk-button uk-button-primary uk-button-large" id = "reserve-button">Make Reservation</button>
                             </p>
                     </div>
+
                 </div>
             </div>
         <!-- </div> -->
@@ -33,5 +34,12 @@
 
 
 
-    </body>
+    <script type="text/javascript">
+      $("#table-button").on("click", () => {
+        $.get("/api/reservations", data => {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
 </html>
